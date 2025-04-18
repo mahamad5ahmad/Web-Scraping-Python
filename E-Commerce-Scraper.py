@@ -19,32 +19,6 @@ class BestBuyScraper:
         self.db_name = "products.db"
         self._setup_database()
 
-    def _select_country(self, country="United States"):
-        """
-        Handle the country selection page
-        Args:
-            country (str): Either "United States" or "Canada"
-        """
-        try:
-            # Wait for country selection page to load
-            WebDriverWait(self.driver, 10).until(
-                EC.presence_of_element_located((By.XPATH, "//span[contains(text(), 'Choose a country')]"))
-            )
-            
-            # Click the appropriate country button
-            country_button = self.driver.find_element(
-                By.XPATH, f"//button[contains(., '{country}')]"
-            )
-            country_button.click()
-            
-            # Wait for navigation to complete
-            time.sleep(2)
-            
-        except TimeoutException:
-            print("Country selection page not detected, proceeding anyway")
-        except Exception as e:
-            print(f"Error selecting country: {str(e)}")
-    
     def _setup_database(self):
         """Initialize SQLite database with error handling."""
         try:
