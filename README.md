@@ -1,8 +1,7 @@
 # Web Scraping & Data Processing Task
 
 ## Overview
-A robust Python web scraper that extracts product information from Best Buy's website. The tool:
-- Automatically handles country selection (US/Canada)
+A robust Python web scraper that extracts product information from random website. The tool:
 - Navigates JavaScript-rendered content using Selenium
 - Implements anti-bot detection measures
 - Outputs clean product data to CSV/sqlite3
@@ -18,12 +17,10 @@ Prerequisites
 
 Setup
 
-    Clone this repository: git clone https://github.com/yourusername/bestbuy-scraper.git
+    Clone this repositor.
     Install the required dependencies:pip install -r requirements.txt
     Download ChromeDriver
-
-        1- Get the version matching your Chrome browser from https://chromedriver.chromium.org/downloads
-
+        1- Get the version matching your Chrome browser from https://chromedriver.chromium.org/download
         2- Place the chromedriver executable in your PATH or in the project directory Usage
 
 ## Usage
